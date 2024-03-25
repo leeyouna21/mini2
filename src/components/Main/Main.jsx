@@ -59,6 +59,7 @@ class Main extends Component {
                   <div className="wrap_title">
                     <h3>해당 기사의 언어를 선택해주세요.</h3>
                   </div>
+                  
                   <button className="language-button" onClick={this.handleBox2ButtonClick}>
                     한국어
                   </button>
