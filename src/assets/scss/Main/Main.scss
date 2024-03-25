@@ -1,0 +1,139 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
+body {
+    font-family: Pretendard !important;
+    background-color: #eaeaea;
+    width: 100%;
+    height: 100%;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-48%, 10%);
+        display: grid;
+        place-items: center;
+        width: calc(100% - 793px);
+        margin: 0 auto;
+        height: 800px;
+        // background: #bdbdbd;
+        .title {
+            position: absolute;
+            top: 25px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: "Pretendard";
+            text-align: center;
+
+            h1 {
+                color: #000;
+                font-size: 40px;
+            }
+        }
+        .boxMain_wrap {
+            // background: #daa4a4;
+            width: calc(100% - 100px);
+            height: 550px;
+            margin: 40px auto 0;
+            .box1 {
+                position: relative;
+                // transform: translate(24%, 0%);
+                // background: #000;
+                .box1_title {
+                    h3 {
+                        color: #000;
+                        font-size: 18px;
+                    }
+                    .searchbar {
+                        background: #aed6f1;
+                        width: 100%;
+                        height: 60px;
+                        border-radius: 10px;
+                        margin-top: 10px;
+                        // padding-left: 10px;
+                        font-family: "Pretendard";
+                        border: none;
+                        outline: none;
+                        font-size: 15px;
+                        &:focus {
+                            outline: 2px solid #4dabe9;
+                        }
+                    }
+                }
+                
+            }
+            .box2,
+            .box3 {
+                margin-top: 30px;
+                
+                .wrap_title {
+                    h3 {
+                        color: #000;
+                        font-size: 18px;
+                    }
+                }
+
+                .language-button,
+                .translate-button {
+                    flex: 1;
+                    transform: translate(-24%, 0%);
+                    margin-top: 10px;
+                    width: 100px;
+                    height: 70px;
+                    border-radius: 10px;
+                    border: 1px solid #ccc;
+                    background: #aed6f1;
+                    font-size: 15px;
+                    border: none;
+                    outline: none;
+                    // margin-left: 27px;
+                    // margin-right: 27px;
+                    font-family: "Pretendard";
+                    font-weight: bold;
+                    color: #000;
+
+                    &:focus {
+                        outline: 2px solid #4dabe9;
+                    }
+                }
+            }
+
+            .sum {
+                position: relative;
+                margin-top: 50px;
+
+                .sum_button {
+                    background: #aed6f1;
+                    width: 100%;
+                    height: 60px;
+                    margin-top: 10px;
+                    font-family: "Pretendard";
+                    border: none;
+                    outline: none;
+                    font-size: 15px;
+                    font-weight: bold;
+                    border-radius: 10px;
+                    &:focus {   
+                        outline: 2px solid #4dabe9;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.slide-up {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.slide-up-hidden {
+    opacity: 0;
+    transform: translateY(20px);
+}
