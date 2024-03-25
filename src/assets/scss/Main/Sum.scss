@@ -1,5 +1,7 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
-
+body {
+    overflow-y: hidden;
+}
 .animate__fadeInRight {
     animation: fadeInRight 1s;
 }
@@ -51,6 +53,58 @@
     flex-direction: row;
     .sum_center {
         flex: 1;
+        width: 100%;
+        height: 100%;
+        .center_container {
+            width: calc(100% - 170px);
+            height: 100%;
+            background: #979797;
+            margin: 0 auto;
+            display: flex;
+            .center_left {
+                margin-top: 50px;
+                width: 50%;
+                height: 100%;
+                background: #757575;
+                .mainBG {
+                    background: #000;
+                    width: 100%;
+                    height: 400px;
+                    .changeBG {
+                        width: 100%;
+                        height: 400px;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                    }
+                }
+                .connection_wrap {
+                    .conne {
+                        h4 {}
+                    }
+                }
+            }
+            .center_right {
+                width: 50%;
+                height: 100%;
+                background: #b03b3b;
+                .sum {
+                
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 120px;
+                    height: 50px;
+                    background: #AED6F1;
+                    border-radius: 10px;
+                    box-shadow: 2px 2px 5px 3px #d4d4d4;
+                    h4 {
+                        color: #000;
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
     }
     .sum_right {
         display: none;
@@ -58,7 +112,7 @@
         display: flex;
         justify-content: center;
         width: 300px;
-        height: 100vh;
+        height: 100%;
         // min-height: 100vh;
         border-left: 2px solid #d9d9d9;
         background: #fff;
@@ -100,7 +154,7 @@
                 }
             }
             .textList_wrap {
-                margin-top: 30px;
+                margin-top: 25px;
                 width: 100%;
                 height: 300px;
                 // background: #c4a1a1;
@@ -152,7 +206,7 @@
             .studyList_wrap {
                 width: 100%;
                 overflow-x: hidden;
-                margin-top: 50px;
+                margin-top: 30px;
                 .title {
                     margin-bottom: 20px;
                     h4 {}
@@ -207,29 +261,45 @@
                             border-radius: 10px;
                         }
                     }
-                    .chbox_wrap {
-                        .study_box {
+                    .my_listwrap {
+                        .my_list {
                             display: flex;
-                            justify-content: center;
-                            align-items: center;
                             width: 100%;
-                            height: 65px;
-                            background: #FAFAFA;
+                            height: 60px;
+                            background: #F8F8F8;
                             border-radius: 10px;
-                            margin-bottom: 10px; 
-                            :last-child {
-                                margin-bottom: none;
+                            margin-bottom: 10px;
+                            .check_wrap {
+                                position: relative;
+                                input {
+                                    position: absolute;
+                                    left: 20px;
+                                    bottom: 20px;
+                                }
                             }
-                            .check {
-                                position: absolute;
-                                left: 20px;
-                            }
-                            h5 {
-                                position: absolute;
-                                left: 50px;
+                            .chbox_wrap {
+                                .study_box {
+                                    
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    width: 100%;
+                                    height: 65px;
+                                    border-radius: 10px;
+                                    margin-bottom: 10px;
+                                    .check {
+                                        
+                                    }
+                                    h5 {
+                                        position: absolute;
+                                        left: 50px;
+                                        color: #000;
+                                    }
+                                }
                             }
                         }
                     }
+                    
                 }
             }
         }
