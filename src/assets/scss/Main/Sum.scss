@@ -157,9 +157,10 @@ body {
                 margin-top: 25px;
                 width: 100%;
                 height: 300px;
-                // background: #c4a1a1;
                 overflow-x: hidden;
+                
                 .title {
+                    
                     h4 {}
                 }
                 .list_wrap {
@@ -182,14 +183,16 @@ body {
                         height: 5px;
                     }
                     .box {
-                        width: auto;
+                        width: 100%;
                         height: 56px;
                         background: #F8F8F8;
                         border-radius: 10px;
                         display: flex;
                         justify-content: start;
                         align-items: center;
+                        transition: background-color 0.3s ease; 
                         margin-bottom: 10px;
+                        cursor: pointer;
                         
                         :last-child {
                             margin-bottom: none;
@@ -200,6 +203,14 @@ body {
                             color: #000;
                             font-weight: 700;
                         }
+                    }
+                    .box.hover {
+                        background-color: #AED6F1;
+                        transition: background-color 0.3s ease; 
+                    }
+                    
+                    .box.boxClick {
+                        background-color: #AED6F1; /* 클릭 시 색상 변경 */
                     }
                 }
             }

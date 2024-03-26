@@ -7,7 +7,20 @@ const Summary = () => {
     const [TodoFocused, setTodoFocused] = useState(false); // 오른쪽 패널 투두리스트 클릭시 보더 나오는 부분
     const [todoinputMsgPlaceholder, setTodoInputMsgPlaceholder] = useState("Click Here !!");
     const [myLists, setMyLists] = useState([]);
+    const [hover, setHover] = useState(false);
+    const [boxClick, setboxClick] = useState(false);
 
+    const handlehover = () => {
+        setHover (true);
+    }
+
+    const handleClick = () => {
+        setboxClick (!boxClick);
+    }
+
+    const handlemouseLeave = () => {
+        setHover (false);
+    }
 
     const handleAddListEnter = (e) => {
         if (e.key === "Enter") {
@@ -41,7 +54,7 @@ const Summary = () => {
             setNewTask(event.target.value); // 입력된 값으로 상태 업데이트
         };
         const handleInputFocus = () => {
-            setTodoInputMsgPlaceholder("Add New TodoList");
+            setTodoInputMsgPlaceholder("Add New Studyplanner");
         };
         
         const handleInputBlur = () => {
@@ -112,23 +125,11 @@ const Summary = () => {
                                 <h4>2024 수능 국어 과학지문</h4>
                             </div>
                             <div className="list_wrap">
-                                <div className="box">
-                                    <h6>1 문단</h6>
-                                </div>
-                                <div className="box">
-                                    <h6>2 문단</h6>
-                                </div>
-                                <div className="box">
-                                    <h6>3 문단</h6>
-                                </div>
-                                <div className="box">
-                                    <h6>4 문단</h6>
-                                </div>
-                                <div className="box">
-                                    <h6>5 문단</h6>
-                                </div>
-                                <div className="box">
-                                    <h6>6 문단</h6>
+                                <div className={`box ${hover ? 'hover' : ''} ${boxClick ? 'boxClick' : ''}`}
+                                    onMouseEnter={handlehover}
+                                    onMouseLeave={handlemouseLeave}
+                                    onClick={handleClick}>
+                                    <h6></h6>
                                 </div>
                             </div>
                         </div>
@@ -139,7 +140,7 @@ const Summary = () => {
                             {isScListVisible.todoList && (
                             <div className="study_wrap" >
                                 <div className={`add_list ${TodoFocused ? 'focused' : ''}`} onClick={handleTodoFocused} onBlur={handleTodoBlur}>
-                                    <div className="add_logo"></div>
+                                    {/* <div className="add_logo"></div> */}
                                     <h6>
                                         <input 
                                             type="text"
