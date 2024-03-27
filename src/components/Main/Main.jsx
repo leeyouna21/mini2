@@ -59,37 +59,43 @@ class Main extends Component {
                   <div className="wrap_title">
                     <h3>해당 기사의 언어를 선택해주세요.</h3>
                   </div>
-                  
-                  <button className="language-button" onClick={this.handleBox2ButtonClick}>
+                  <div className="buttons">
+                    <button onClick={this.handleBox2ButtonClick}>
+
                     한국어
-                  </button>
-                  <button className="language-button" onClick={this.handleBox2ButtonClick}>
+                    </button>
+                    <button onClick={this.handleBox2ButtonClick}>
                     영어
-                  </button>
-                  <button className="language-button" onClick={this.handleBox2ButtonClick}>
+                    </button>
+                    <button onClick={this.handleBox2ButtonClick}>
                     일어
-                  </button>
-                  <button className="language-button" onClick={this.handleBox2ButtonClick}>
+                    </button>
+                    <button onClick={this.handleBox2ButtonClick}>
                     중국어
-                  </button>
+                    </button>
+                    </div>
                 </div>
               </div>
               <div className={`box3 ${showBox3 ? 'slide-up' : 'slide-up-hidden'}`}>
                 <div className="minibox_wrap2">
-                  <h3>어떤 언어로 번역해드릴까요?</h3>
+                  <div className="wrap_title">
+                    <h3>어떤 언어로 번역해드릴까요?</h3>
+                  </div>
                 </div>
-                <button className="translate-button" onClick={this.handleBox3ButtonClick}>
-                  한국어
-                </button>
-                <button className="translate-button" onClick={this.handleBox3ButtonClick}>
-                  영어
-                </button>
-                <button className="translate-button" onClick={this.handleBox3ButtonClick}>
-                  일어
-                </button>
-                <button className="translate-button" onClick={this.handleBox3ButtonClick}>
-                  중국어
-                </button>
+                <div className="buttons">
+                  <button className="translate-button" onClick={this.handleBox3ButtonClick}>
+                    한국어
+                  </button>
+                  <button className="translate-button" onClick={this.handleBox3ButtonClick}>
+                    영어
+                  </button>
+                  <button className="translate-button" onClick={this.handleBox3ButtonClick}>
+                    일어
+                  </button>
+                  <button className="translate-button" onClick={this.handleBox3ButtonClick}>
+                    중국어
+                  </button>
+                </div>
               </div>
               <div className={`sum ${showSum ? 'slide-up' : 'slide-up-hidden'}`}>
                 <Link to="/sum">
