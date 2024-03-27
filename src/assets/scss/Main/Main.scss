@@ -2,16 +2,14 @@
 
 body {
   font-family: Pretendard !important;
-  background-color: #eaeaea;
+  background-color: #FFF4E0;
   width: 100%;
   height: 100%;
 }
-
 .main {
   width: 100%;
   height: 100%;
   position: relative;
-
   .container {
     position: absolute;
     top: 50%;
@@ -21,11 +19,10 @@ body {
     place-items: center;
     width: calc(100% - 793px);
     margin: 0 auto;
-    height: 800px;
-
+    height: 650px;
     .title {
       position: absolute;
-      top: 25px;
+      top: 15px;
       left: 50%;
       transform: translate(-50%, -50%);
       font-family: "Pretendard";
@@ -50,9 +47,8 @@ body {
             color: #000;
             font-size: 18px;
           }
-
           .searchbar {
-            background: #aed6f1;
+            background: #FFDEA0;
             width: 100%;
             height: 60px;
             border-radius: 10px;
@@ -61,15 +57,59 @@ body {
             border: none;
             outline: none;
             font-size: 15px;
-
             &:focus {
-              outline: 2px solid #4dabe9;
+              outline: 2px solid #FFDEA0;
             }
+          }
+          .searchbar::placeholder {
+            text-align: right; /* 플레이스 홀더를 오른쪽 정렬 */
+            margin-right: 433px; /* 오른쪽 여백 추가 */
           }
         }
       }
 
-      .box2,
+      .box2{
+        margin-top: 30px;
+
+        .wrap_title {
+          h3 {
+            color: #000;
+            font-size: 18px;
+          }
+        }
+
+        .buttons {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 10px;
+
+          button {
+            flex: 1;
+            height : 70px;
+            margin-right: 35px;
+            font-family: "Pretendard";
+            font-weight: bold;
+            font-size: 15px;
+            color: #000;
+            background: #FFDEA0;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &:last-child {
+              margin-right: 0;
+            }
+            &:hover {
+              outline: 2px solid #FFC24F;
+            }
+            &:focus{
+              background-color: #FFC24F;
+            }
+          }
+        }
+      }
       .box3 {
         margin-top: 30px;
 
@@ -88,12 +128,12 @@ body {
           button {
             flex: 1;
             height : 70px;
-            margin-right: 10px;
+            margin-right: 30px;
             font-family: "Pretendard";
             font-weight: bold;
             font-size: 15px;
             color: #000;
-            background: #aed6f1;
+            background: #FFDEA0;
             border: none;
             outline: none;
             border-radius: 10px;
@@ -103,9 +143,11 @@ body {
             &:last-child {
               margin-right: 0;
             }
-
             &:hover {
-              background-color: #7fb3d5;
+              outline: 2px solid #FFC24F;
+            }
+            &:focus{
+              background-color: #FFC24F;
             }
           }
         }
@@ -113,10 +155,10 @@ body {
 
       .sum {
         position: relative;
-        margin-top: 50px;
+        margin-top: 35px;
 
         .sum_button {
-          background: #aed6f1;
+          background: #FFDEA0;
           width: 100%;
           height: 60px;
           margin-top: 10px;
@@ -126,9 +168,15 @@ body {
           font-size: 15px;
           font-weight: bold;
           border-radius: 10px;
+          transition: background-color 0.3s ease;
+          cursor: pointer;
+          
+          &:hover {
+            background-color: #FFC24F;
+          }
 
-          &:focus {
-            outline: 2px solid #4dabe9;
+          &:focus{
+            background-color: #FFC24F;
           }
         }
       }
