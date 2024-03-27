@@ -9,6 +9,7 @@ const Summary = () => {
     const [myLists, setMyLists] = useState([]);
     const [hover, setHover] = useState(false);
     const [boxClick, setboxClick] = useState(false);
+    const [boxes, setBoxes] = useState([]); // 상자 정보를 담을 배열
 
     const handlehover = () => {
         setHover (true);
@@ -92,24 +93,38 @@ const Summary = () => {
     };
     return (
         <div className="sum_wrap">
+            <h3>IntelliText</h3>
             <div className="sum_center">
                 <div className="center_container">
                     <div className="center_left">
-                        <div className="mainBG">
-                            <img src="/mini2/public/image/text_img.png" alt="" className='changeBG'/>
+                        <div className="score">
+                            <h4>2024년에 등록 된 리뷰의 총점은 90점으로 높은편입니다.</h4>
                         </div>
-                        <div className="connection_wrap">
-                            <div className="conne">
-                                <h4></h4>
+                        <div className="blog">
+                            <div className="source">
+                                <h5>💡 ‘연돈’에 대한 이용우님의 블로그 요약입니다.</h5>
+                            </div>
+                            <div className="good">
+                                🥰 만족해요 - 사장님이친절해요. 음식이 매우 맛있어요. 주차가 편해요. 외식하기 좋아요.
+                            </div>
+                            <div className="bad">
+                            😶 아쉬워요 - 사장님이 안친절해요. 음식이 매우 맛없어요. 주차가 안 편해요. 외식하기 안 좋아요.
                             </div>
                         </div>
                     </div>
-                    
-                    <div className="center_right">
-                        <div className="sum">
-                            <h4>Summary!</h4>
+                    <div className="center_center">
+                        <div className="score">
+                            <h4>2023년에 등록 된 리뷰의 총점은 20점으로 낮은편입니다.</h4>
+                        </div>
+                        <div className="blog">
+                            <div className="source">
+                                <h5></h5>
+                            </div>
+                            <div className="good"></div>
+                            <div className="bad"></div>
                         </div>
                     </div>
+                    <div className="center_right"></div>
                     
                 </div>
             </div>
@@ -122,25 +137,28 @@ const Summary = () => {
                         </div>
                         <div className="textList_wrap">
                             <div className="title">
-                                <h4>2024 수능 국어 과학지문</h4>
+                                <h4>최근 리뷰 블로그 바로가기</h4>
                             </div>
                             <div className="list_wrap">
-                                <div className={`box ${hover ? 'hover' : ''} ${boxClick ? 'boxClick' : ''}`}
-                                    onMouseEnter={handlehover}
-                                    onMouseLeave={handlemouseLeave}
-                                    onClick={handleClick}>
-                                    <h6></h6>
-                                </div>
+                                {boxes.map((box, index) => (
+                                    <div key={index}
+                                        className={`box ${box.hover ? 'hover' : ''} ${box.boxClick ? 'boxClick' : ''}`}
+                                        onMouseEnter={() => handlehover(index)}
+                                        onMouseLeave={handlemouseLeave}
+                                        onClick={() => handleClick(index)}>
+                                        <h6>{box.content}</h6>
+                                    </div>
+                                ))}
                             </div>
                         </div>
                         <div className="studyList_wrap">
                             <div className="title">
-                                <h4>Study planner</h4>
+                                <h4>예전 리뷰 블로그 바로가기</h4>
                             </div>
-                            {isScListVisible.todoList && (
+                            {/* {isScListVisible.todoList && (
                             <div className="study_wrap" >
                                 <div className={`add_list ${TodoFocused ? 'focused' : ''}`} onClick={handleTodoFocused} onBlur={handleTodoBlur}>
-                                    {/* <div className="add_logo"></div> */}
+                                    {/* <div className="add_logo"></div> 
                                     <h6>
                                         <input 
                                             type="text"
@@ -153,7 +171,7 @@ const Summary = () => {
                                         />
                                     </h6>
                                 </div>
-                                {/* 투두 함수를 받아와서 뿌려주어야 하는 위치 시작 */}
+                                {/* 투두 함수를 받아와서 뿌려주어야 하는 위치 시작 *
                                 <div className="my_listwrap">
                                     {myLists.map((list, index) => list.complete == undefined &&  (
                                         <div className="my_list" key={index}>
@@ -172,7 +190,7 @@ const Summary = () => {
                                     )}
                                 </div>
                             </div>
-                        )}
+                            )} */}
                         </div>
                     </div>
                 </div>
