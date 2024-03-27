@@ -74,6 +74,7 @@ body {
                     justify-content: center;
                     align-items: center;
                     h4 {
+                        font-weight: 500;
                     }
                 }
                 .blog {
@@ -115,6 +116,7 @@ body {
                     justify-content: center;
                     align-items: center;
                     h4 {
+                        font-weight: 500;
                     }
                 }
                 
@@ -125,18 +127,35 @@ body {
                 background: #FFC24F;
                 border-radius: 10px;
                 .finalSum_title {
+                    height: 40px;
+                    margin-top: 20px;
                     h3 {}
-                    .finalSum_score {
-                        h6 {}
+                }
+                .finalSum_score {
+                    // height: 40px;
+                    margin-bottom: 20px;
+                    line-height: 1.2;
+                    h5 {
+                        font-weight: normal;
                     }
-                    .finalSum_prev {
-                        h6 {}
+                }
+                .finalSum_prev {
+                    margin-bottom: 20px;
+                    line-height: 1.2;
+                    h5 {
+                        font-weight: normal;
                     }
-                    .finalSum_tast {
-                        h6 {}
+                }
+                .finalSum_tast {
+                    margin-bottom: 20px;
+                    line-height: 1.2;
+                    h5 {
+                        font-weight: normal;
                     }
-                    .finalSum_rec {
-                        h6 {}
+                }
+                .finalSum_rec {
+                    h5 {
+                        font-weight: normal;
                     }
                 }
             }

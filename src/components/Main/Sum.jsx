@@ -99,7 +99,7 @@ const Summary = () => {
                 <div className="center_container">
                     <div className="center_left">
                         <div className="score">
-                            <h4>2024년에 등록 된 리뷰의 총점은 90점으로 높은편입니다.</h4>
+                            <h4>2024년에 등록 된 리뷰의 평점은 <span style={{fontWeight: 'bold'}}>90점</span>으로 높은편입니다.</h4>
                         </div>
                         <div className="blog">
                             <div className="source">
@@ -115,7 +115,7 @@ const Summary = () => {
                     </div>
                     <div className="center_center">
                         <div className="score">
-                            <h4>2023년에 등록 된 리뷰의 총점은 20점으로 낮은편입니다.</h4>
+                            <h4>2023년에 등록 된 리뷰의 평점은 <span style={{fontWeight: 'bold'}}>20점</span>으로 낮은편입니다.</h4>
                         </div>
                         <div className="blog">
                             <div className="source">
@@ -124,16 +124,16 @@ const Summary = () => {
                             <div className="good"></div>
                             <div className="bad"></div>
                         </div>
-                    </div>
+                    </div>   
                     <div className="center_right">
                         <div className="finalSum_title">
                             <h3>💡IntelliText가 분석한 ‘연돈’ 찐리뷰</h3>
                         </div>
                         <div className="finalSum_score">
-                            <h5>2024년 전 후 블로그를 비교해 보았을 때 전체적인 평점은 80점 입니다. </h5>
+                            <h5>2024년 전 후 블로그를 비교해 보았을 때 전체적인 평점은 <span style={{fontWeight: 'bold'}}>80점</span> 입니다. </h5>
                         </div>
                         <div className="finalSum_prev">
-                            <h5>2023년에는 주차가 불편하다는 평이 많았는데,2024년에는 주차 문제가 개선 되어 불편 사항이 많이 줄어들었습니다.</h5>
+                            <h5>2023년에는 주차가 불편하다는 평이 많았는데,2024년에는 <span style={{fontWeight: 'bold'}}>주차 문제가 개선 되어</span> 불편 사항이 많이 줄어들었습니다.</h5>
                         </div>
                         <div className="finalSum_tast">
                             <h5>전체적인 음식 맛의 평은 아주 좋습니다.
@@ -141,7 +141,7 @@ const Summary = () => {
                             </h5>
                         </div>
                         <div className="finalSum_rec">
-                            <h5>이 곳에 가셔서 꼭 드셔야 하는 메뉴를 골라보았을 때 ‘치즈돈까스' 메뉴가 1순위로 나옵니다.</h5>
+                            <h5>이 곳에 가셔서 꼭 드셔야 하는 메뉴를 골라보았을 때 '<span style={{fontWeight: 'bold'}}>치즈돈까스</span>' 메뉴가 1순위로 나옵니다.</h5>
                         </div>
                     </div>
                     
@@ -160,25 +160,13 @@ const Summary = () => {
                             </div>
                             <div className="list_wrap">
                                 {boxes.map((box, index) => (
-                                    <div 
-                                        key={index}
-                                        className={`box ${box.hover ? 'hover' : ''} ${box.boxClick ? 'boxClick' : ''}`}
-                                        onMouseEnter={() => handlehover(index)}
-                                        onMouseLeave={handlemouseLeave}
-                                        onClick={() => handleClick(index)}
-                                    >
-                                    <h6>fdg</h6>
-                                    </div>
-                                ))}
-                                {/* {boxes.map((box, index) => (
                                     <div key={index}
                                         className={`box ${box.hover ? 'hover' : ''} ${box.boxClick ? 'boxClick' : ''}`}
                                         onMouseEnter={() => handlehover(index)}
                                         onMouseLeave={handlemouseLeave}
                                         onClick={() => handleClick(index)}>
-                                        <link rel="stylesheet" href="https://m.blog.naver.com/ange15321/222820773679" />
                                     </div>
-                                ))} */}
+                                ))}
                             </div>
                         </div>
                         <div className="studyList_wrap">
