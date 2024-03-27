@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Summary = () => {
     const [isSumRightVisible, setIsSumRightVisible] = useState(true);
@@ -124,7 +125,20 @@ const Summary = () => {
                             <div className="bad"></div>
                         </div>
                     </div>
-                    <div className="center_right"></div>
+                    <div className="center_right">
+                        <div className="finalSum_title">
+                            <h3>💡IntelliText가 분석한 ‘연돈’ 찐리뷰</h3>
+                        </div>
+                        <div className="finalSum_score">
+                            <h6></h6>
+                        </div>
+                        <div className="finalSum_prev">
+                            <h6></h6>
+                        </div>
+                        <div className="finalSum_rec">
+                            <h6></h6>
+                        </div>
+                    </div>
                     
                 </div>
             </div>
@@ -141,14 +155,25 @@ const Summary = () => {
                             </div>
                             <div className="list_wrap">
                                 {boxes.map((box, index) => (
+                                    <div 
+                                        key={index}
+                                        className={`box ${box.hover ? 'hover' : ''} ${box.boxClick ? 'boxClick' : ''}`}
+                                        onMouseEnter={() => handlehover(index)}
+                                        onMouseLeave={handlemouseLeave}
+                                        onClick={() => handleClick(index)}
+                                    >
+                                    <h6>fdg</h6>
+                                    </div>
+                                ))}
+                                {/* {boxes.map((box, index) => (
                                     <div key={index}
                                         className={`box ${box.hover ? 'hover' : ''} ${box.boxClick ? 'boxClick' : ''}`}
                                         onMouseEnter={() => handlehover(index)}
                                         onMouseLeave={handlemouseLeave}
                                         onClick={() => handleClick(index)}>
-                                        <h6>{box.content}</h6>
+                                        <link rel="stylesheet" href="https://m.blog.naver.com/ange15321/222820773679" />
                                     </div>
-                                ))}
+                                ))} */}
                             </div>
                         </div>
                         <div className="studyList_wrap">
