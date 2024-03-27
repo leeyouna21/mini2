@@ -130,13 +130,18 @@ const Summary = () => {
                             <h3>💡IntelliText가 분석한 ‘연돈’ 찐리뷰</h3>
                         </div>
                         <div className="finalSum_score">
-                            <h6></h6>
+                            <h5>2024년 전 후 블로그를 비교해 보았을 때 전체적인 평점은 80점 입니다. </h5>
                         </div>
                         <div className="finalSum_prev">
-                            <h6></h6>
+                            <h5>2023년에는 주차가 불편하다는 평이 많았는데,2024년에는 주차 문제가 개선 되어 불편 사항이 많이 줄어들었습니다.</h5>
+                        </div>
+                        <div className="finalSum_tast">
+                            <h5>전체적인 음식 맛의 평은 아주 좋습니다.
+                                기준이 되는 년도들의 블로그를 다 파악해 보았을 때, 전체적으로 음식에 대한 평은 굉장히 높은 수준으로 나타납니다.
+                            </h5>
                         </div>
                         <div className="finalSum_rec">
-                            <h6></h6>
+                            <h5>이 곳에 가셔서 꼭 드셔야 하는 메뉴를 골라보았을 때 ‘치즈돈까스' 메뉴가 1순위로 나옵니다.</h5>
                         </div>
                     </div>
                     
@@ -180,42 +185,6 @@ const Summary = () => {
                             <div className="title">
                                 <h4>예전 리뷰 블로그 바로가기</h4>
                             </div>
-                            {/* {isScListVisible.todoList && (
-                            <div className="study_wrap" >
-                                <div className={`add_list ${TodoFocused ? 'focused' : ''}`} onClick={handleTodoFocused} onBlur={handleTodoBlur}>
-                                    {/* <div className="add_logo"></div> 
-                                    <h6>
-                                        <input 
-                                            type="text"
-                                            placeholder={todoinputMsgPlaceholder}
-                                            value={newTask}
-                                            onChange={handleInputChangeTodo}
-                                            onFocus={handleInputFocus}
-                                            onBlur={handleInputBlur}
-                                            onKeyPress={handleAddListEnter}
-                                        />
-                                    </h6>
-                                </div>
-                                {/* 투두 함수를 받아와서 뿌려주어야 하는 위치 시작 *
-                                <div className="my_listwrap">
-                                    {myLists.map((list, index) => list.complete == undefined &&  (
-                                        <div className="my_list" key={index}>
-                                            <div className="check_wrap">
-                                                <input
-                                                    type="checkbox"
-                                                />
-                                            </div>
-                                            <div className="chbox_wrap">
-                                                <div className="study_box">
-                                                    <h5>{list.title}</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        )
-                                    )}
-                                </div>
-                            </div>
-                            )} */}
                         </div>
                     </div>
                 </div>

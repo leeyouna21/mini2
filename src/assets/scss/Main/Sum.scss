@@ -57,7 +57,7 @@ body {
         height: 100%;
         .center_container {
             width: calc(100% - 140px);
-            height: 80%;
+            height: auto;
             margin: 0 auto;
             display: flex;
             margin-top: 7%;
@@ -121,23 +121,22 @@ body {
             }
             .center_right {
                 width: 45%;
-                height: 100%;
+                height: auto;
                 background: #FFC24F;
                 border-radius: 10px;
-                .sum {
-                
-                    cursor: pointer;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    width: 120px;
-                    height: 50px;
-                    background: #AED6F1;
-                    border-radius: 10px;
-                    box-shadow: 2px 2px 5px 3px #d4d4d4;
-                    h4 {
-                        color: #000;
-                        font-size: 15px;
+                .finalSum_title {
+                    h3 {}
+                    .finalSum_score {
+                        h6 {}
+                    }
+                    .finalSum_prev {
+                        h6 {}
+                    }
+                    .finalSum_tast {
+                        h6 {}
+                    }
+                    .finalSum_rec {
+                        h6 {}
                     }
                 }
             }
