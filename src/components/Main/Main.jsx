@@ -57,32 +57,32 @@ class Main extends Component {
                 </div>
               </div>
               {showBox2 && (
-                 <div className={`box2 ${showBox2 ? 'slide-up' : 'slide-up-hidden'}`}>
+                <div className={`box2 ${showBox2 ? 'slide-up' : 'slide-up-hidden'}`}>
                   <div className="minibox_wrap1">
                     <div className="wrap_title">
                       <h3>어떤 플랫폼의 리뷰를 보고 싶으세요?</h3>
                     </div>
                     <div className="buttons">
                       <button
-                        className={activeBox3Button === '네이버 블로그' ? 'translate-button active' : 'translate-button'}
+                        className={activeBox2Button === '네이버 블로그' ? 'translate-button active-naver' : 'translate-button'}
                         onClick={() => this.handleBox2ButtonClick('네이버 블로그')}
                       >
                         네이버 블로그
                       </button>
                       <button
-                        className={activeBox3Button === '구글' ? 'translate-button active' : 'translate-button'}
+                        className={activeBox2Button === '구글' ? 'translate-button active-google' : 'translate-button'}
                         onClick={() => this.handleBox2ButtonClick('구글')}
                       >
                         구글
                       </button>
                       <button
-                        className={activeBox3Button === '티스토리' ? 'translate-button active' : 'translate-button'}
+                        className={activeBox2Button === '티스토리' ? 'translate-button active-tistory' : 'translate-button'}
                         onClick={() => this.handleBox2ButtonClick('티스토리')}
                       >
                         티스토리
                       </button>
                       <button
-                        className={activeBox3Button === '다음' ? 'translate-button active' : 'translate-button'}
+                        className={activeBox2Button === '다음' ? 'translate-button active-daum' : 'translate-button'}
                         onClick={() => this.handleBox2ButtonClick('다음')}
                       >
                         다음
@@ -99,13 +99,13 @@ class Main extends Component {
                     </div>
                     <div className="buttons">
                       <button
-                        className={activeBox2Button === '2024' ? 'active' : ''}
+                        className={activeBox3Button === '2024' ? 'active' : ''}
                         onClick={() => this.handleBox3ButtonClick('2024')}
                       >
                         2024
                       </button>
                       <button
-                        className={activeBox2Button === '2023' ? 'active' : ''}
+                        className={activeBox3Button === '2023' ? 'active' : ''}
                         onClick={() => this.handleBox3ButtonClick('2023')}
                       >
                         2023
