@@ -62,8 +62,8 @@ body {
             }
           }
           .searchbar::placeholder {
-            text-align: right; /* 플레이스 홀더를 오른쪽 정렬 */
-            margin-right: 433px; /* 오른쪽 여백 추가 */
+            text-align: right;
+            margin-right: 433px;
           }
         }
       }
@@ -192,5 +192,6 @@ body {
 
 .slide-up-hidden {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
