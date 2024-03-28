@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import summaryData from '../../json/summary.json';
+
+
 
 const Summary = () => {
     const [isSumRightVisible, setIsSumRightVisible] = useState(true);
@@ -99,7 +102,10 @@ const Summary = () => {
                 <div className="center_container">
                     <div className="center_left">
                         <div className="score">
-                            <h4>2024년에 등록 된 리뷰의 평점은 <span style={{fontWeight: 'bold'}}>90점</span>으로 높은편입니다.</h4>
+                            {/* <h4>2024년에 등록 된 리뷰의 평점은 <span style={{fontWeight: 'bold'}}>90점</span>으로 높은편입니다.</h4> */}
+                            <h2>상단 요약: {summaryData.top_summary}</h2>
+                            <h2>하단 요약: {summaryData.bottom_summary}</h2>
+                            <h2>별점: {summaryData.star_rating}</h2>
                         </div>
                         <div className="blog">
                             <div className="source">
