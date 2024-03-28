@@ -165,14 +165,15 @@ const Summary = () => {
                                 <h4>최근 리뷰 블로그 바로가기</h4>
                             </div>
                             <div className="list_wrap">
-                                {boxes.map((box, index) => (
+                                <div className="box"></div>
+                                {/* {boxes.map((box, index) => (
                                     <div key={index}
                                         className={`box ${box.hover ? 'hover' : ''} ${box.boxClick ? 'boxClick' : ''}`}
                                         onMouseEnter={() => handlehover(index)}
                                         onMouseLeave={handlemouseLeave}
                                         onClick={() => handleClick(index)}>
                                     </div>
-                                ))}
+                                ))} */}
                             </div>
                         </div>
                         <div className="studyList_wrap">
