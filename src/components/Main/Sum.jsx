@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import summaryData from '../../json/summary.json';
-
+import {useNavigate, useParams} from "react-router-dom";
 
 
 const Summary = () => {
@@ -14,6 +14,11 @@ const Summary = () => {
     const [hover, setHover] = useState(false);
     const [boxClick, setboxClick] = useState(false);
     const [boxes, setBoxes] = useState([]); // 상자 정보를 담을 배열
+    const navigate = useNavigate();
+
+    const clickHome = () => {
+        navigate("/main")
+    }
 
     const handlehover = () => {
         setHover (true);
@@ -97,25 +102,33 @@ const Summary = () => {
     };
     return (
         <div className="sum_wrap">
-            <h3>IntelliText</h3>
+            <h3 className='home_title' onClick={clickHome}>IntelliText</h3>
             <div className="sum_center">
                 <div className="center_container">
                     <div className="center_left">
                         <div className="score">
-                            {/* <h4>2024년에 등록 된 리뷰의 평점은 <span style={{fontWeight: 'bold'}}>90점</span>으로 높은편입니다.</h4> */}
-                            <h2>상단 요약: {summaryData.top_summary}</h2>
-                            <h2>하단 요약: {summaryData.bottom_summary}</h2>
-                            <h2>별점: {summaryData.star_rating}</h2>
+                            <h4>2024년에 등록 된 리뷰의 평점은 <span style={{fontWeight: 'bold'}}>90점</span>으로 높은편입니다.</h4>
                         </div>
                         <div className="blog">
                             <div className="source">
-                                <h5>💡 ‘연돈’에 대한 이용우님의 블로그 요약입니다.</h5>
+                                <h5>💡 ‘연돈’에 대한 참새야모하니님의 블로그 요약입니다.</h5>
                             </div>
                             <div className="good">
-                                🥰 만족해요 - 사장님이친절해요. 음식이 매우 맛있어요. 주차가 편해요. 외식하기 좋아요.
+                                🥰 만족해요 - 새로운 건물이어서 쾌적해요. 좋은 재료를 사용하는 거 같아요. 재료가 신선해요. 
                             </div>
                             <div className="bad">
-                            😶 아쉬워요 - 사장님이 안친절해요. 음식이 매우 맛없어요. 주차가 안 편해요. 외식하기 안 좋아요.
+                            😶 아쉬워요 - 음식을 직접 가지러 가야해요. 주문한 메뉴가 많으면, 많이 움직여야해요. 기대한 만큼의 맛은 아니예요. 외식하기 안 좋아요.
+                            </div>
+                        </div>
+                        <div className="blog">
+                            <div className="source">
+                                <h5>💡 ‘연돈’에 대한 리즈님의 블로그 요약입니다.</h5>
+                            </div>
+                            <div className="good">
+                                🥰 만족해요 - 캐치테이블 예약이 돼요. 아기 의자 및 식기가 있어요. 주차가 편해요. 외식하기 좋아요.
+                            </div>
+                            <div className="bad">
+                            😶 아쉬워요 - 화장실이 청결하지 않아요. 캐치테이블 순번을 꼼꼼하게 확인하지 않아요. 모두 셀프예요. 푸드코트 같은 느낌이 들어요.
                             </div>
                         </div>
                     </div>
@@ -125,10 +138,25 @@ const Summary = () => {
                         </div>
                         <div className="blog">
                             <div className="source">
-                                <h5></h5>
+                                <h5>💡 ‘연돈’에 대한 부산남자일호님의 블로그 요약입니다.</h5>
                             </div>
-                            <div className="good"></div>
-                            <div className="bad"></div>
+                            <div className="good">
+                                🥰 만족해요 - 방송에도 나와서 그런지 확실히 맛이있긴 했어요. 돈까스를 좋아하는데 바삭하기도 하고 고기도 부드럽고 맛있었어요.
+                            </div>
+                            <div className="bad">
+                            😶 아쉬워요 - 돈까스가 딱딱해요. 음식이 식어있어요. 깊은 맛이 아닌, 연한 맛이 나요. 줄 서서 먹을 정돈 아니예요.
+                            </div>
+                        </div>
+                        <div className="blog">
+                            <div className="source">
+                                <h5>💡 ‘연돈’에 대한 치카치카를잘하는치코리타님의 블로그 요약입니다.</h5>
+                            </div>
+                            <div className="good">
+                                🥰 만족해요 - 인기가 매우 많은 치즈돈까스를 시켜서 먹었어요.
+                            </div>
+                            <div className="bad">
+                            😶 아쉬워요 - 돈까스가 딱딱해요. 음식이 식어있어요. 깊은 맛이 아닌, 연한 맛이 나요. 줄 서서 먹을 정돈 아니예요.
+                            </div>
                         </div>
                     </div>   
                     <div className="center_right">
@@ -142,7 +170,7 @@ const Summary = () => {
                             <h5>2023년에는 주차가 불편하다는 평이 많았는데,2024년에는 <span style={{fontWeight: 'bold'}}>주차 문제가 개선 되어</span> 불편 사항이 많이 줄어들었습니다.</h5>
                         </div>
                         <div className="finalSum_tast">
-                            <h5>전체적인 음식 맛의 평은 아주 좋습니다.
+                            <h5>전체적인 음식 맛의 평은 좋습니다.
                                 기준이 되는 년도들의 블로그를 다 파악해 보았을 때, 전체적으로 음식에 대한 평은 굉장히 높은 수준으로 나타납니다.
                             </h5>
                         </div>
