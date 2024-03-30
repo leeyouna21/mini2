@@ -7,80 +7,11 @@ import {useNavigate, useParams} from "react-router-dom";
 const Summary = () => {
     const [isSumRightVisible, setIsSumRightVisible] = useState(true);
     const [newTask, setNewTask] = useState("");
-    const [displayedTasks, setDisplayedTasks] = useState([]); // 입력값을 표시할 배열
-    const [TodoFocused, setTodoFocused] = useState(false); // 오른쪽 패널 투두리스트 클릭시 보더 나오는 부분
-    const [todoinputMsgPlaceholder, setTodoInputMsgPlaceholder] = useState("Click Here !!");
-    const [myLists, setMyLists] = useState([]);
-    const [hover, setHover] = useState(false);
-    const [boxClick, setboxClick] = useState(false);
-    const [boxes, setBoxes] = useState([]); // 상자 정보를 담을 배열
     const navigate = useNavigate();
 
     const clickHome = () => {
         navigate("/main")
     }
-
-    const handlehover = () => {
-        setHover (true);
-    }
-
-    const handleClick = () => {
-        setboxClick (!boxClick);
-    }
-
-    const handlemouseLeave = () => {
-        setHover (false);
-    }
-
-    const handleAddListEnter = (e) => {
-        if (e.key === "Enter") {
-            const newTodoItem = {
-                title: newTask,
-                complete: undefined
-            };
-            setMyLists((prevList) => [...prevList, newTodoItem]);
-            setNewTask(""); // 입력된 값 초기화
-        }
-    };
-    //끝
-    
-    const handleInputText = (e) => {
-        setNewTask(e.target.value); // 입력값 업데이트
-    };
-
-    const handleKeyDown = (e) => {
-        if (e.key === 'Enter' && newTask.trim() !== '') {
-            setDisplayedTasks(prevTasks => [
-                ...prevTasks,
-                newTask.trim() // 입력값을 trim하여 공백 제거 후 저장
-            ]);
-            setNewTask(""); // 입력값 초기화
-        }
-    };
-
-        //오른쪽 패널 투두리스트 add new task 입력된 값을 저장할 상태와 상태를 업데이트할 함수 시작
-        const handleInputChangeTodo = (event) => {
-            // input 값이 변경될 때마다 호출되는 함수
-            setNewTask(event.target.value); // 입력된 값으로 상태 업데이트
-        };
-        const handleInputFocus = () => {
-            setTodoInputMsgPlaceholder("Add New Studyplanner");
-        };
-        
-        const handleInputBlur = () => {
-            setTodoInputMsgPlaceholder("Click Here !!");
-        };
-    
-
-    //투두리스트 클릭시 border생성 함수 시작
-    const handleTodoFocused = () => {
-        setTodoFocused(true);
-    }
-
-    const handleTodoBlur = () => {
-        setTodoFocused(false);
-    }
-    //투두리스트 클릭시 border생성 함수 끝
 
     // 창 열었다가 접기 기능
     const [isScListVisible, setScListVisible] = useState({
@@ -95,14 +26,23 @@ const Summary = () => {
             [listName]: !prevState[listName]
         }));
         };
-    // 창 열었다가 접기 기능 끝
 
     const handleToggleSumRight = () => {
         setIsSumRightVisible(!isSumRightVisible);
+        const rightBtn = document.querySelector('.right_btn');
+        if(!isSumRightVisible) {
+            rightBtn.classList.add('clicked');
+        } else  {
+            rightBtn.classList.remove('clicked');
+        }
     };
+
+    // 창 열었다가 접기 기능 끝
+
     return (
         <div className="sum_wrap">
             <h3 className='home_title' onClick={clickHome}>IntelliText</h3>
+            <div className="right_btn" onClick={handleToggleSumRight}></div>
             <div className="sum_center">
                 <div className="center_container">
                     <div className="center_left">
@@ -144,7 +84,7 @@ const Summary = () => {
                                 🥰 만족해요 - 방송에도 나와서 그런지 확실히 맛이있긴 했어요. 돈까스를 좋아하는데 바삭하기도 하고 고기도 부드럽고 맛있었어요.
                             </div>
                             <div className="bad">
-                            😶 아쉬워요 - 돈까스가 딱딱해요. 음식이 식어있어요. 깊은 맛이 아닌, 연한 맛이 나요. 줄 서서 먹을 정돈 아니예요.
+                            😶 아쉬워요 - 근데 엄청 기대할 맛은 아니었어요. 줄 서서 먹을 정돈 아니예요.
                             </div>
                         </div>
                         <div className="blog">
@@ -164,18 +104,31 @@ const Summary = () => {
                             <h3>💡IntelliText가 분석한 ‘연돈’ 찐리뷰</h3>
                         </div>
                         <div className="finalSum_score">
-                            <h5>2024년 전 후 블로그를 비교해 보았을 때 전체적인 평점은 <span style={{fontWeight: 'bold'}}>80점</span> 입니다. </h5>
+                            <h5>2024년 전 후 블로그를 비교해 보았을 때 전체적인 평점은 <span style={{fontWeight: 'bold'}}>55점</span> 입니다. </h5>
                         </div>
                         <div className="finalSum_prev">
-                            <h5>2023년에는 주차가 불편하다는 평이 많았는데,2024년에는 <span style={{fontWeight: 'bold'}}>주차 문제가 개선 되어</span> 불편 사항이 많이 줄어들었습니다.</h5>
+                            <h5>2024년 전에는 주차가 불편하다는 평이 많았는데,2024년 이후 리뷰에는 건물도 새 건물로 지어지고 주차할 수 있는 공간이 넓어져<span style={{fontWeight: 'bold'}}>주차 문제가 개선 되어</span> 불편 사항이 많이 줄어들었습니다.</h5>
                         </div>
                         <div className="finalSum_tast">
                             <h5>전체적인 음식 맛의 평은 좋습니다.
-                                기준이 되는 년도들의 블로그를 다 파악해 보았을 때, 전체적으로 음식에 대한 평은 굉장히 높은 수준으로 나타납니다.
+                                기준이 되는 년도들의 블로그를 다 파악해 보았을 때, 전체적으로 음식에 대한 평은 높은 수준으로 나타나지만, 일부 블로그에선 사장님이 계시지 않아 직원들만 있을 때, 사장님이 계실 때 음식의 맛차이가 난다고 
+                                리뷰한 블로거들이 있었습니다.
                             </h5>
                         </div>
                         <div className="finalSum_rec">
-                            <h5>이 곳에 가셔서 꼭 드셔야 하는 메뉴를 골라보았을 때 '<span style={{fontWeight: 'bold'}}>치즈돈까스</span>' 메뉴가 1순위로 나옵니다.</h5>
+                            <h5>이 곳에 가셔서 꼭 드셔야 하는 메뉴를 골라보았을 때 '<span style={{fontWeight: 'bold'}}>치즈돈까스</span>' 메뉴가 1순위로 나옵니다.
+                                한정으로 판매하기 때문에 일찍 가서 드시는 걸 추천드립니다. 치즈돈까스 다음으로 인기가 많은 메뉴는 등심까스, 안심까스입니다. 
+                            </h5>
+                        </div>
+                        <div className="text_tip">
+                            <h5>
+                                💡IntelliText가 분석한 <span style={{fontWeight: 'bold'}}>연돈 더 맛있게 먹는 꿀팁</span>  <br />
+                                소스 없이 본연의 맛을 느껴보기 <br />
+                                테이블 위에 올려진 히말라야 핑크소금을 갈아서 찍어 먹어보기 <br />
+                                같이 나오는 연돈만의 특제소스에 찍어 먹어보기 <br />
+                                추가로 시킨 연돈표 수제카레에 찍어서 먹기
+                                
+                            </h5>
                         </div>
                     </div>
                     
@@ -193,21 +146,98 @@ const Summary = () => {
                                 <h4>최근 리뷰 블로그 바로가기</h4>
                             </div>
                             <div className="list_wrap">
-                                <div className="box"></div>
-                                {/* {boxes.map((box, index) => (
-                                    <div key={index}
-                                        className={`box ${box.hover ? 'hover' : ''} ${box.boxClick ? 'boxClick' : ''}`}
-                                        onMouseEnter={() => handlehover(index)}
-                                        onMouseLeave={handlemouseLeave}
-                                        onClick={() => handleClick(index)}>
-                                    </div>
-                                ))} */}
+                                <div className="box">
+                                    <h6>
+                                        <Link to="https://blog.naver.com/todghkfskan/223383800916"style={{ textDecoration: 'none', color: 'inherit' }} >
+                                            작성자 치코리타 - 연돈 간략한 후기 #연돈 #내돈내산
+                                        </Link>
+                                    </h6>
+                                </div>
+                                <div className="box">
+                                    <h6>
+                                        <Link to="https://blog.naver.com/decadentliz/223384511071"style={{ textDecoration: 'none', color: 'inherit' }} >
+                                            작성자 리즈 - 제주도 연돈 캐치테이블 주말 얘약 성공 웨이팅 5시간 후기
+                                        </Link>
+                                    </h6>                                
+                                </div>
+                                <div className="box">
+                                    <h6>
+                                        <Link to="https://blog.naver.com/decadentliz/223384511071"style={{ textDecoration: 'none', color: 'inherit' }} >
+                                            작성자 레츠니 - 드디어 가본 제주 연돈 후기(웨이팅 방법)
+                                        </Link>
+                                    </h6>                                
+                                </div>
+                                <div className="box">
+                                    <h6>
+                                        <Link to="https://blog.naver.com/decadentliz/223384511071"style={{ textDecoration: 'none', color: 'inherit' }} >
+                                            작성자 내가 뭘 물처럼 먹고있나 - 제주도 연돈 돈까스 덕후가 드디어 먹어본 솔직후기 + 예약
+                                        </Link>
+                                    </h6>                                
+                                </div>
+                                <div className="box">
+                                    <h6>
+                                        <Link to="https://blog.naver.com/decadentliz/223384511071"style={{ textDecoration: 'none', color: 'inherit' }} >
+                                            작성자 레이로 방방곡곡 - [제주도맛집] 대한민국 1등 돈까스 제주도 '연돈'찐후기 (근황, 예약, 웨이팅, 주차, 메뉴, 볼카츠, 개인적 의견)
+                                        </Link>
+                                    </h6>                                
+                                </div>
                             </div>
                         </div>
                         <div className="studyList_wrap">
                             <div className="title">
                                 <h4>예전 리뷰 블로그 바로가기</h4>
                             </div>
+                            <div className="list_wrap">
+                                <div className="box">
+                                    <h6>
+                                        <Link to="https://blog.naver.com/decadentliz/223384511071"style={{ textDecoration: 'none', color: 'inherit' }} >
+                                            작성자 내가 뭘 물처럼 먹고있나 - 제주도 연돈 돈까스 덕후가 드디어 먹어본 솔직후기 + 예약
+                                        </Link>
+                                    </h6>                                
+                                </div>
+                                <div className="box">
+                                    <h6>
+                                        <Link to="https://blog.naver.com/decadentliz/223384511071"style={{ textDecoration: 'none', color: 'inherit' }} >
+                                            작성자 내가 뭘 물처럼 먹고있나 - 제주도 연돈 돈까스 덕후가 드디어 먹어본 솔직후기 + 예약
+                                        </Link>
+                                    </h6>                                
+                                </div>
+                                <div className="box">
+                                    <h6>
+                                        <Link to="https://blog.naver.com/decadentliz/223384511071"style={{ textDecoration: 'none', color: 'inherit' }} >
+                                            작성자 내가 뭘 물처럼 먹고있나 - 제주도 연돈 돈까스 덕후가 드디어 먹어본 솔직후기 + 예약
+                                        </Link>
+                                    </h6>                                
+                                </div>
+
+                                <div className="box">
+                                    <h6>
+                                        <Link to="https://blog.naver.com/decadentliz/223384511071"style={{ textDecoration: 'none', color: 'inherit' }} >
+                                            작성자 내가 뭘 물처럼 먹고있나 - 제주도 연돈 돈까스 덕후가 드디어 먹어본 솔직후기 + 예약
+                                        </Link>
+                                    </h6>                                
+                                </div><div className="box">
+                                    <h6>
+                           
+                                        <Link to="https://blog.naver.com/decadentliz/223384511071"style={{ textDecoration: 'none', color: 'inherit' }} >
+                                            작성자 내가 뭘 물처럼 먹고있나 - 제주도 연돈 돈까스 덕후가 드디어 먹어본 솔직후기 + 예약
+                                        </Link>
+                                    </h6>                                
+                                </div><div className="box">
+                                    <h6>
+                                        <Link to="https://blog.naver.com/decadentliz/223384511071"style={{ textDecoration: 'none', color: 'inherit' }} >
+                                            작성자 내가 뭘 물처럼 먹고있나 - 제주도 연돈 돈까스 덕후가 드디어 먹어본 솔직후기 + 예약
+                                        </Link>
+                                    </h6>                                
+                                </div><div className="box">
+                                    <h6>
+                                        <Link to="https://blog.naver.com/decadentliz/223384511071"style={{ textDecoration: 'none', color: 'inherit' }} >
+                                            작성자 내가 뭘 물처럼 먹고있나 - 제주도 연돈 돈까스 덕후가 드디어 먹어본 솔직후기 + 예약
+                                        </Link>
+                                    </h6>                                
+                                </div>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
