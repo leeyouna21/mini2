@@ -74,7 +74,7 @@ const Summary = () => {
                     </div>
                     <div className="center_center">
                         <div className="score">
-                            <h4>2023년에 등록 된 리뷰의 평점은 <span style={{fontWeight: 'bold'}}>20점</span>으로 낮은편입니다.</h4>
+                            <h4>2023년에 등록 된 리뷰의 평점은 <span style={{fontWeight: 'bold'}}>40점</span>으로 낮은편입니다.</h4>
                         </div>
                         <div className="blog">
                             <div className="source">
@@ -104,7 +104,7 @@ const Summary = () => {
                             <h3>💡IntelliText가 분석한 ‘연돈’ 찐리뷰</h3>
                         </div>
                         <div className="finalSum_score">
-                            <h5>2024년 전 후 블로그를 비교해 보았을 때 전체적인 평점은 <span style={{fontWeight: 'bold'}}>55점</span> 입니다. </h5>
+                            <h5>2024년 전 후 블로그를 비교해 보았을 때 전체적인 평점은 <span style={{fontWeight: 'bold'}}>65점</span> 입니다. </h5>
                         </div>
                         <div className="finalSum_prev">
                             <h5>2024년 전에는 주차가 불편하다는 평이 많았는데,2024년 이후 리뷰에는 건물도 새 건물로 지어지고 주차할 수 있는 공간이 넓어져<span style={{fontWeight: 'bold'}}>주차 문제가 개선 되어</span> 불편 사항이 많이 줄어들었습니다.</h5>
@@ -191,48 +191,29 @@ const Summary = () => {
                                 <div className="box">
                                     <h6>
                                         <Link to="https://blog.naver.com/decadentliz/223384511071"style={{ textDecoration: 'none', color: 'inherit' }} >
-                                            작성자 내가 뭘 물처럼 먹고있나 - 제주도 연돈 돈까스 덕후가 드디어 먹어본 솔직후기 + 예약
+                                            작성자 djfhuee - 연돈 돈까스 덕후가 드디어 먹어본 솔직후기 + 예약
                                         </Link>
                                     </h6>                                
                                 </div>
                                 <div className="box">
                                     <h6>
-                                        <Link to="https://blog.naver.com/decadentliz/223384511071"style={{ textDecoration: 'none', color: 'inherit' }} >
-                                            작성자 내가 뭘 물처럼 먹고있나 - 제주도 연돈 돈까스 덕후가 드디어 먹어본 솔직후기 + 예약
+                                        <Link to="https://jejudogo.com/board/227"style={{ textDecoration: 'none', color: 'inherit' }} >
+                                            작성자 제주도고 - 제주서귀포시 연돈 돈까스 덕후가 드디어 먹어본 솔직후기 + 예약
                                         </Link>
                                     </h6>                                
                                 </div>
                                 <div className="box">
                                     <h6>
-                                        <Link to="https://blog.naver.com/decadentliz/223384511071"style={{ textDecoration: 'none', color: 'inherit' }} >
-                                            작성자 내가 뭘 물처럼 먹고있나 - 제주도 연돈 돈까스 덕후가 드디어 먹어본 솔직후기 + 예약
+                                        <Link to="https://jeju-onny.tistory.com/226"style={{ textDecoration: 'none', color: 'inherit' }} >
+                                            작성자 제주소영언니 - 제주도 연돈 돈까스 후기
                                         </Link>
                                     </h6>                                
                                 </div>
 
                                 <div className="box">
                                     <h6>
-                                        <Link to="https://blog.naver.com/decadentliz/223384511071"style={{ textDecoration: 'none', color: 'inherit' }} >
-                                            작성자 내가 뭘 물처럼 먹고있나 - 제주도 연돈 돈까스 덕후가 드디어 먹어본 솔직후기 + 예약
-                                        </Link>
-                                    </h6>                                
-                                </div><div className="box">
-                                    <h6>
-                           
-                                        <Link to="https://blog.naver.com/decadentliz/223384511071"style={{ textDecoration: 'none', color: 'inherit' }} >
-                                            작성자 내가 뭘 물처럼 먹고있나 - 제주도 연돈 돈까스 덕후가 드디어 먹어본 솔직후기 + 예약
-                                        </Link>
-                                    </h6>                                
-                                </div><div className="box">
-                                    <h6>
-                                        <Link to="https://blog.naver.com/decadentliz/223384511071"style={{ textDecoration: 'none', color: 'inherit' }} >
-                                            작성자 내가 뭘 물처럼 먹고있나 - 제주도 연돈 돈까스 덕후가 드디어 먹어본 솔직후기 + 예약
-                                        </Link>
-                                    </h6>                                
-                                </div><div className="box">
-                                    <h6>
-                                        <Link to="https://blog.naver.com/decadentliz/223384511071"style={{ textDecoration: 'none', color: 'inherit' }} >
-                                            작성자 내가 뭘 물처럼 먹고있나 - 제주도 연돈 돈까스 덕후가 드디어 먹어본 솔직후기 + 예약
+                                        <Link to="https://joiemood.tistory.com/entry/%EC%A0%9C%EC%A3%BC%EB%8F%84-%EC%97%B0%EB%8F%88-%EB%8F%88%EA%B9%8C%EC%8A%A4-%EC%86%94%EC%A7%81%ED%9B%84%EA%B8%B0"style={{ textDecoration: 'none', color: 'inherit' }} >
+                                            작성자 joie Mood - 제주도 연돈 돈까스 솔직후기!
                                         </Link>
                                     </h6>                                
                                 </div>

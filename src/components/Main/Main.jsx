@@ -112,13 +112,11 @@ class Main extends Component {
                   </button>
                 </div>
               </div>
-              {showSum && (
                 <div className={`sum ${showSum ? 'slide-up' : 'slide-up-hidden'}`}>
                   <Link to="/Loading">
                     <button className="sum_button">Search</button>
                   </Link>
                 </div>
-              )}
             </div>
           </div>
         </div>
