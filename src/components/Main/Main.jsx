@@ -57,7 +57,7 @@ class Main extends Component {
                 </div>
               </div>
               {showBox2 && (
-                 <div className={`box2 ${showBox2 ? 'slide-up' : 'slide-up-hidden'}`}>
+                <div className={`box2 ${showBox2 ? 'slide-up' : 'slide-up-hidden'}`}>
                   <div className="minibox_wrap1">
                     <div className="wrap_title">
                       <h3>어떤 플랫폼의 리뷰를 보고 싶으세요?</h3>

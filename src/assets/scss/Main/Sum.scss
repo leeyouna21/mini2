@@ -51,6 +51,12 @@ body {
     flex-direction: column;
     display: flex;
     flex-direction: row;
+    .home_title {
+        position: absolute;
+        top: 30px;
+        left: 20px;
+        cursor: pointer;
+    }
     .sum_center {
         flex: 1;
         width: 100%;
@@ -119,7 +125,31 @@ body {
                         font-weight: 500;
                     }
                 }
-                
+                .blog {
+                    margin-top: 35px;
+                    width: 100%;
+                    height: auto;
+                    background: #FFDEA0;
+                    border-radius: 10px;
+                    .source {
+                        padding-top: 30px;
+                        height: 30px;
+                        margin-bottom: 20px;
+                        h5 {
+                            font-size: 16px;
+                        }
+                    }
+                    .good {
+                        height: auto;
+                        line-height: 1.5;
+                        margin-bottom: 20px;
+                    }
+                    .bad {
+                        height: auto;
+                        line-height: 1.5;
+                        padding-bottom: 30px;
+                    }
+                }
             }
             .center_right {
                 width: 45%;
@@ -137,6 +167,7 @@ body {
                     line-height: 1.2;
                     h5 {
                         font-weight: normal;
+                        font-size: 18px;
                     }
                 }
                 .finalSum_prev {
@@ -144,6 +175,7 @@ body {
                     line-height: 1.2;
                     h5 {
                         font-weight: normal;
+                        font-size: 18px;
                     }
                 }
                 .finalSum_tast {
@@ -151,11 +183,13 @@ body {
                     line-height: 1.2;
                     h5 {
                         font-weight: normal;
+                        font-size: 18px;
                     }
                 }
                 .finalSum_rec {
                     h5 {
                         font-weight: normal;
+                        font-size: 18px;
                     }
                 }
             }
