@@ -117,7 +117,7 @@ class Main extends Component {
 
               {showSum && (
                 <div className={`sum ${showSum ? 'slide-up' : 'slide-up-hidden'}`}>
-                  <Link to="/sum">
+                  <Link to="/Loading">
                     <button className="sum_button">Search</button>
                   </Link>
                 </div>

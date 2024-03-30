@@ -51,6 +51,26 @@ body {
     flex-direction: column;
     display: flex;
     flex-direction: row;
+    .home_title {
+        position: absolute;
+        top: 30px;
+        left: 20px;
+        cursor: pointer;
+    }
+    .right_btn {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='icon icon-tabler icon-tabler-brand-blogger' width='44' height='44' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23F5DEB3' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M8 21h8a5 5 0 0 0 5 -5v-3a3 3 0 0 0 -3 -3h-1v-2a5 5 0 0 0 -5 -5h-4a5 5 0 0 0 -5 5v8a5 5 0 0 0 5 5z' /%3E%3Cpath d='M7 7m0 1.5a1.5 1.5 0 0 1 1.5 -1.5h3a1.5 1.5 0 0 1 1.5 1.5v0a1.5 1.5 0 0 1 -1.5 1.5h-3a1.5 1.5 0 0 1 -1.5 -1.5z' /%3E%3Cpath d='M7 14m0 1.5a1.5 1.5 0 0 1 1.5 -1.5h7a1.5 1.5 0 0 1 1.5 1.5v0a1.5 1.5 0 0 1 -1.5 1.5h-7a1.5 1.5 0 0 1 -1.5 -1.5z' /%3E%3C/svg%3E");                    width: 30px;
+        height: 30px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        top: 30px;
+        display: block;
+    }
+    .right_btn.clicked {
+        display: none;
+    }
     .sum_center {
         flex: 1;
         width: 100%;
@@ -119,7 +139,31 @@ body {
                         font-weight: 500;
                     }
                 }
-                
+                .blog {
+                    margin-top: 35px;
+                    width: 100%;
+                    height: auto;
+                    background: #FFDEA0;
+                    border-radius: 10px;
+                    .source {
+                        padding-top: 30px;
+                        height: 30px;
+                        margin-bottom: 20px;
+                        h5 {
+                            font-size: 16px;
+                        }
+                    }
+                    .good {
+                        height: auto;
+                        line-height: 1.5;
+                        margin-bottom: 20px;
+                    }
+                    .bad {
+                        height: auto;
+                        line-height: 1.5;
+                        padding-bottom: 30px;
+                    }
+                }
             }
             .center_right {
                 width: 45%;
@@ -137,6 +181,7 @@ body {
                     line-height: 1.2;
                     h5 {
                         font-weight: normal;
+                        font-size: 18px;
                     }
                 }
                 .finalSum_prev {
@@ -144,6 +189,7 @@ body {
                     line-height: 1.2;
                     h5 {
                         font-weight: normal;
+                        font-size: 18px;
                     }
                 }
                 .finalSum_tast {
@@ -151,11 +197,20 @@ body {
                     line-height: 1.2;
                     h5 {
                         font-weight: normal;
+                        font-size: 18px;
                     }
                 }
                 .finalSum_rec {
                     h5 {
                         font-weight: normal;
+                        font-size: 18px;
+                    }
+                }
+                .text_tip {
+                    margin-top: 30px;
+                    h5 {
+                        font-weight: normal;
+                        font-size: 18px;
                     }
                 }
             }
@@ -168,7 +223,6 @@ body {
         justify-content: center;
         width: 300px;
         height: 100%;
-        // min-height: 100vh;
         border-left: 2px solid #FDE6C3;
         background: #fff;
         .right_container {
@@ -176,6 +230,7 @@ body {
             width: 90%;
             height: 100vh;
             // background: #dbdbdb;
+            
             .icon_area {
                 position: relative;
                 margin-top: 0.9722vw;
@@ -211,9 +266,8 @@ body {
                 width: 100%;
                 height: 300px;
                 overflow-x: hidden;
-                
+                overflow-y: hidden;
                 .title {
-                    
                     h4 {}
                 }
                 .list_wrap {
@@ -223,22 +277,26 @@ body {
                     position: relative;
                     overflow: scroll;
                     &::-webkit-scrollbar {
+<<<<<<< HEAD
                         width: 3px;
+=======
+                        width: 3px; 
+>>>>>>> 2d685d3da47fc983653ac4f671d3189849d9d7e7
                         height: 5px;
                     }
                     &::-webkit-scrollbar-thumb {
-                        height: 5px; /* 스크롤바의 길이 */
-                        background: #d9d9d9; /* 스크롤바의 색상 */
+                        height: 5px;
+                        background: #ffc36a;
                         border-radius: 5px;
                     }
                     &::-webkit-scrollbar-track {
-                        background: rgba(33, 122, 244, 0.1); /*스크롤바 뒷 배경 색상*/
+                        background: rgba(229, 164, 0, 0.1);
                         height: 5px;
                     }
                     .box {
                         width: 100%;
                         height: 56px;
-                        background: #F8F8F8;
+                        background: #fff3e1;
                         border-radius: 10px;
                         display: flex;
                         justify-content: start;
@@ -246,12 +304,16 @@ body {
                         transition: background-color 0.3s ease; 
                         margin-bottom: 10px;
                         cursor: pointer;
-                        
+                        h6 {
+                            white-space: nowrap; /* 텍스트가 줄바꿈되지 않도록 설정 */
+                            overflow: hidden; /* 넘치는 텍스트 숨김 */
+                            text-overflow: ellipsis;
+                        }
                         :last-child {
                             margin-bottom: none;
                         }
                         h6 {
-                            margin-left: 20px;
+                            margin-left:5px;
                             font-size: 15px;
                             color: #000;
                             font-weight: 700;
@@ -261,114 +323,74 @@ body {
                         background-color: #AED6F1;
                         transition: background-color 0.3s ease; 
                     }
-                    
                     .box.boxClick {
                         background-color: #AED6F1; /* 클릭 시 색상 변경 */
                     }
                 }
             }
             .studyList_wrap {
+                overflow-x: hidden !important;
+                overflow-y: hidden !important;
                 width: 100%;
-                overflow-x: hidden;
                 margin-top: 30px;
+                height: 400px;
+                position: relative;
+                overflow: scroll;
+                
                 .title {
                     margin-bottom: 20px;
                     h4 {}
                 }
-                .study_wrap {
+                .list_wrap {
+                    margin-top: 10px;
                     width: auto;
-                    height: 350px;
+                    height: 400px;
                     position: relative;
                     overflow: scroll;
-                    overflow-x: hidden;
                     &::-webkit-scrollbar {
-                        width: 3px; /* 스크롤바의 너비 */
+                        width: 3px; 
                         height: 5px;
                     }
                     &::-webkit-scrollbar-thumb {
-                        height: 5px; /* 스크롤바의 길이 */
-                        background: #d9d9d9; /* 스크롤바의 색상 */
+                        height: 5px;
+                        background: #ffc36a;
                         border-radius: 5px;
                     }
                     &::-webkit-scrollbar-track {
-                        background: rgba(33, 122, 244, 0.1); /*스크롤바 뒷 배경 색상*/
+                        background: rgba(229, 164, 0, 0.1);
                         height: 5px;
                     }
-                    .add_list {
-                        height: auto;
-                        margin-bottom: 8px;
-                        display: flex;
-                        width: auto;
+                    .box {
+                        width: 100%;
                         height: 56px;
+                        background: #fff3e1;
+                        border-radius: 10px;
                         display: flex;
+                        justify-content: start;
+                        align-items: center;
+                        transition: background-color 0.3s ease; 
+                        margin-bottom: 10px;
                         cursor: pointer;
-                        align-items: center;
-                        // gap: 8px;
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        position: relative;
-                        .add_logo {
-                            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M14.8571 9.14286H9.14286V14.8571C9.14286 15.1602 9.02245 15.4509 8.80812 15.6653C8.5938 15.8796 8.30311 16 8 16C7.6969 16 7.40621 15.8796 7.19188 15.6653C6.97755 15.4509 6.85714 15.1602 6.85714 14.8571V9.14286H1.14286C0.839753 9.14286 0.549063 9.02245 0.334735 8.80812C0.120408 8.5938 0 8.3031 0 8C0 7.6969 0.120408 7.40621 0.334735 7.19188C0.549063 6.97755 0.839753 6.85714 1.14286 6.85714H6.85714V1.14286C6.85714 0.839753 6.97755 0.549062 7.19188 0.334735C7.40621 0.120408 7.6969 0 8 0C8.30311 0 8.5938 0.120408 8.80812 0.334735C9.02245 0.549062 9.14286 0.839753 9.14286 1.14286V6.85714H14.8571C15.1602 6.85714 15.4509 6.97755 15.6653 7.19188C15.8796 7.40621 16 7.6969 16 8C16 8.3031 15.8796 8.5938 15.6653 8.80812C15.4509 9.02245 15.1602 9.14286 14.8571 9.14286Z' fill='%23999999'/%3E%3C/svg%3E");
-                            width: 16px;
-                            height: 16px;
-                            background-repeat: no-repeat;
-                            position: absolute;
-                            right: 20px;
+                        
+                        h6 {
+                            white-space: nowrap; /* 텍스트가 줄바꿈되지 않도록 설정 */
+                            overflow: hidden; /* 넘치는 텍스트 숨김 */
+                            text-overflow: ellipsis;
                         }
-                        input {
-                            width: 100%;
-                            height: 60px;
-                            // background: #000;
-                            outline: none;
-                            border: none;
-                            border-radius: 10px;
+                        :last-child {
+                            margin-bottom: none;
+                        }
+                        h6 {
+                            margin-left:5px;
+                            font-size: 15px;
+                            color: #000;
+                            font-weight: 700;
                         }
                     }
-                    .my_listwrap {
-                        .my_list {
-                            display: flex;
-                            width: 100%;
-                            height: 60px;
-                            background: #F8F8F8;
-                            border-radius: 10px;
-                            margin-bottom: 10px;
-                            .check_wrap {
-                                position: relative;
-                                input {
-                                    position: absolute;
-                                    left: 20px;
-                                    bottom: 20px;
-                                }
-                            }
-                            .chbox_wrap {
-                                .study_box {
-                                    
-                                    display: flex;
-                                    justify-content: center;
-                                    align-items: center;
-                                    width: 100%;
-                                    height: 65px;
-                                    border-radius: 10px;
-                                    margin-bottom: 10px;
-                                    .check {
-                                        
-                                    }
-                                    h5 {
-                                        position: absolute;
-                                        left: 50px;
-                                        color: #000;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    
                 }
+                
             }
         }
     }
-    .sum_right.animate__fadeInRight {
-        display: block; /* 애니메이션 효과 적용시 화면에 보이도록 변경 */
-    }
+    
 }
