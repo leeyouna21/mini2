@@ -277,11 +277,9 @@ body {
                     position: relative;
                     overflow: scroll;
                     &::-webkit-scrollbar {
-<<<<<<< HEAD
                         width: 3px;
-=======
                         width: 3px; 
->>>>>>> 2d685d3da47fc983653ac4f671d3189849d9d7e7
+                        width: 3px; /* 스크롤바의 너비 */
                         height: 5px;
                     }
                     &::-webkit-scrollbar-thumb {
