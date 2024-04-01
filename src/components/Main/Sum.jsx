@@ -190,49 +190,51 @@ const Summary = () => {
                             <div className="list_wrap">
                                 <div className="box">
                                     <h6>
-                                        <Link to="https://blog.naver.com/decadentliz/223384511071"style={{ textDecoration: 'none', color: 'inherit' }} >
-                                            작성자 내가 뭘 물처럼 먹고있나 - 제주도 연돈 돈까스 덕후가 드디어 먹어본 솔직후기 + 예약
+                                        <Link to="https://blog.naver.com/reset0621/223301342066"style={{ textDecoration: 'none', color: 'inherit' }} >
+                                            작성자 보블 - 연돈 돈가스 솔직후기
                                         </Link>
                                     </h6>                                
                                 </div>
                                 <div className="box">
                                     <h6>
-                                        <Link to="https://blog.naver.com/decadentliz/223384511071"style={{ textDecoration: 'none', color: 'inherit' }} >
-                                            작성자 내가 뭘 물처럼 먹고있나 - 제주도 연돈 돈까스 덕후가 드디어 먹어본 솔직후기 + 예약
+                                        <Link to="https://blog.naver.com/chchqhqh/223006798355"style={{ textDecoration: 'none', color: 'inherit' }} >
+                                            작성자 풍뎅이숲학교 - 연돈 현장 예약방법 아쉬운점 및 후기~!
                                         </Link>
                                     </h6>                                
                                 </div>
                                 <div className="box">
                                     <h6>
-                                        <Link to="https://blog.naver.com/decadentliz/223384511071"style={{ textDecoration: 'none', color: 'inherit' }} >
-                                            작성자 내가 뭘 물처럼 먹고있나 - 제주도 연돈 돈까스 덕후가 드디어 먹어본 솔직후기 + 예약
+                                        <Link to="https://blog.naver.com/1024sr/223189573987"style={{ textDecoration: 'none', color: 'inherit' }} >
+                                            작성자 온제onze - 제주서귀포 돈까스 맛집 연동 평일 웨이팅 :
                                         </Link>
                                     </h6>                                
                                 </div>
 
                                 <div className="box">
                                     <h6>
-                                        <Link to="https://blog.naver.com/decadentliz/223384511071"style={{ textDecoration: 'none', color: 'inherit' }} >
-                                            작성자 내가 뭘 물처럼 먹고있나 - 제주도 연돈 돈까스 덕후가 드디어 먹어본 솔직후기 + 예약
+                                        <Link to="https://blog.naver.com/hwangbobae11/223192011999"style={{ textDecoration: 'none', color: 'inherit' }} >
+                                            작성자 bobilife - 연돈 예약 방법, 시간 맛있게 먹고온 후기
                                         </Link>
                                     </h6>                                
-                                </div><div className="box">
+                                </div>
+                                <div className="box">
                                     <h6>
-                           
-                                        <Link to="https://blog.naver.com/decadentliz/223384511071"style={{ textDecoration: 'none', color: 'inherit' }} >
-                                            작성자 내가 뭘 물처럼 먹고있나 - 제주도 연돈 돈까스 덕후가 드디어 먹어본 솔직후기 + 예약
+                                        <Link to="https://blog.naver.com/young9178/223301949481"style={{ textDecoration: 'none', color: 'inherit' }} >
+                                            작성자 엄마는 오늘도 나간다 - 제주도 연돈 예약, 확장 후 현장 예약 후기 제주 핫플
                                         </Link>
                                     </h6>                                
-                                </div><div className="box">
+                                </div>
+                                <div className="box">
                                     <h6>
                                         <Link to="https://blog.naver.com/decadentliz/223384511071"style={{ textDecoration: 'none', color: 'inherit' }} >
-                                            작성자 내가 뭘 물처럼 먹고있나 - 제주도 연돈 돈까스 덕후가 드디어 먹어본 솔직후기 + 예약
+                                            작성자 리봉짱 - 제주 연돈 확장 이전 후 예약 방법 웨이팅 돈까스 후기
                                         </Link>
                                     </h6>                                
-                                </div><div className="box">
+                                </div>
+                                <div className="box">
                                     <h6>
-                                        <Link to="https://blog.naver.com/decadentliz/223384511071"style={{ textDecoration: 'none', color: 'inherit' }} >
-                                            작성자 내가 뭘 물처럼 먹고있나 - 제주도 연돈 돈까스 덕후가 드디어 먹어본 솔직후기 + 예약
+                                        <Link to="https://blog.naver.com/rlaguswn444/223247792772"style={{ textDecoration: 'none', color: 'inherit' }} >
+                                            작성자 먹어보고서 - 제주 연돈 돈까스 드디어 먹어봤어요.(주소이전, 예약방법, 후기)
                                         </Link>
                                     </h6>                                
                                 </div>
