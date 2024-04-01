@@ -1,3 +1,5 @@
+
+
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -49,79 +51,72 @@ class Main extends Component {
                   <input
                     className="searchbar"
                     type="text"
-                    placeholder="찾으시는 매장 이름을 입력하세요."
+                    placeholder="찾으시는 음식점을 작성하세요."
                     value={inputValue}
                     onChange={this.handleInputChange}
                     onKeyPress={this.handleInputKeyPress}
                   />
                 </div>
               </div>
-              {showBox2 && (
-                <div className={`box2 ${showBox2 ? 'slide-up' : 'slide-up-hidden'}`}>
-                  <div className="minibox_wrap1">
-                    <div className="wrap_title">
-                      <h3>어떤 플랫폼의 리뷰를 보고 싶으세요?</h3>
-                    </div>
-                    <div className="buttons">
-                      <button
-                        className={activeBox3Button === '네이버 블로그' ? 'translate-button active' : 'translate-button'}
-                        onClick={() => this.handleBox2ButtonClick('네이버 블로그')}
-                      >
-                        네이버 블로그
-                      </button>
-                      <button
-                        className={activeBox3Button === '구글' ? 'translate-button active' : 'translate-button'}
-                        onClick={() => this.handleBox2ButtonClick('구글')}
-                      >
-                        구글
-                      </button>
-                      <button
-                        className={activeBox3Button === '티스토리' ? 'translate-button active' : 'translate-button'}
-                        onClick={() => this.handleBox2ButtonClick('티스토리')}
-                      >
-                        티스토리
-                      </button>
-                      <button
-                        className={activeBox3Button === '다음' ? 'translate-button active' : 'translate-button'}
-                        onClick={() => this.handleBox2ButtonClick('다음')}
-                      >
-                        다음
-                      </button>
-                    </div>
+              <div className={`box2 ${showBox2 ? 'slide-up' : 'slide-up-hidden'}`}>
+                <div className="minibox_wrap1">
+                  <div className="wrap_title">
+                    <h3>어떤 플랫폼의 리뷰를 보고 싶으세요?</h3>
+                  </div>
+                  <div className="buttons">
+                    <button
+                      className={activeBox2Button === '네이버 블로그' ? 'active' : ''}
+                      onClick={() => this.handleBox2ButtonClick('네이버 블로그')}
+                    >
+                      네이버 블로그
+                    </button>
+                    <button
+                      className={activeBox2Button === '구글' ? 'active' : ''}
+                      onClick={() => this.handleBox2ButtonClick('구글')}
+                    >
+                      구글
+                    </button>
+                    <button
+                      className={activeBox2Button === '티스토리' ? 'active' : ''}
+                      onClick={() => this.handleBox2ButtonClick('티스토리')}
+                    >
+                      티스토리
+                    </button>
+                    <button
+                      className={activeBox2Button === '다음' ? 'active' : ''}
+                      onClick={() => this.handleBox2ButtonClick('다음')}
+                    >
+                      다음
+                    </button>
                   </div>
                 </div>
-              )}
-              {showBox3 && (
-                <div className={`box3 ${showBox3 ? 'slide-up' : 'slide-up-hidden'}`}>
-                  <div className="minibox_wrap2">
-                    <div className="wrap_title">
-                      <h3>보고싶은 리뷰의 작성연도를 선택해주세요.</h3>
-                    </div>
-                    <div className="buttons">
-                      <button
-                        className={activeBox2Button === '2024' ? 'active' : ''}
-                        onClick={() => this.handleBox3ButtonClick('2024')}
-                      >
-                        2024
-                      </button>
-                      <button
-                        className={activeBox2Button === '2023' ? 'active' : ''}
-                        onClick={() => this.handleBox3ButtonClick('2023')}
-                      >
-                        2023
-                      </button>
-                    </div>
+              </div>
+              <div className={`box3 ${showBox3 ? 'slide-up' : 'slide-up-hidden'}`}>
+                <div className="minibox_wrap2">
+                  <div className="wrap_title">
+                    <h3>보고싶은 리뷰의 작성연도를 선택 해주세요.</h3>
                   </div>
                 </div>
-              )}
-
-              {showSum && (
+                <div className="buttons">
+                  <button
+                    className={activeBox3Button === '2024' ? 'translate-button active' : 'translate-button'}
+                    onClick={() => this.handleBox3ButtonClick('2024')}
+                  >
+                    2024
+                  </button>
+                  <button
+                    className={activeBox3Button === '2023' ? 'translate-button active' : 'translate-button'}
+                    onClick={() => this.handleBox3ButtonClick('2023')}
+                  >
+                    2023
+                  </button>
+                </div>
+              </div>
                 <div className={`sum ${showSum ? 'slide-up' : 'slide-up-hidden'}`}>
-                  <Link to="/sum">
+                  <Link to="/Loading">
                     <button className="sum_button">Search</button>
                   </Link>
                 </div>
-              )}
             </div>
           </div>
         </div>

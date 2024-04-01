@@ -1,5 +1,8 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
 
+$button-color-default: #FFDEA0;
+$button-color-active: #FFC24F;
+
 body {
   font-family: Pretendard !important;
   background-color: #FFF4E0;
@@ -19,26 +22,23 @@ body {
     place-items: center;
     width: calc(100% - 793px);
     margin: 0 auto;
-    height: 650px;
+    height: 800px;
     .title {
       position: absolute;
-      top: 15px;
+      top: 25px;
       left: 50%;
       transform: translate(-50%, -50%);
       font-family: "Pretendard";
       text-align: center;
-
       h1 {
         color: #000;
         font-size: 40px;
       }
     }
-
     .boxMain_wrap {
       width: calc(100% - 100px);
       height: 550px;
       margin: 40px auto 0;
-
       .box1 {
         position: relative;
 
@@ -48,7 +48,7 @@ body {
             font-size: 18px;
           }
           .searchbar {
-            background: #FFDEA0;
+            background: #{$button-color-default};
             width: 100%;
             height: 60px;
             border-radius: 10px;
@@ -58,16 +58,15 @@ body {
             outline: none;
             font-size: 15px;
             &:focus {
-              outline: 2px solid #FFDEA0;
+              outline: 2px solid #{$button-color-default};
             }
           }
-          .searchbar::placeholder {
-            text-align: right;
-            margin-right: 433px;
-          }
+          .searchbar::placeholder{
+              text-align: right;
+              margin-right: 443px;
+            }
         }
       }
-
       .box2{
         margin-top: 30px;
 
@@ -77,88 +76,79 @@ body {
             font-size: 18px;
           }
         }
-
         .buttons {
           display: flex;
           justify-content: space-between;
           margin-top: 10px;
-
           button {
             flex: 1;
             height : 70px;
-            margin-right: 35px;
+            margin-right: 50px;
             font-family: "Pretendard";
             font-weight: bold;
             font-size: 15px;
             color: #000;
-            background: #FFDEA0;
+            background: #{$button-color-default};
             border: none;
             outline: none;
             border-radius: 10px;
             cursor: pointer;
             transition: background-color 0.3s ease;
-
             &:last-child {
               margin-right: 0;
             }
             &:hover {
-              outline: 2px solid #FFC24F;
+              background-color: #{$button-color-active};
             }
-            &:focus{
-              background-color: #FFC24F;
+            &.active {
+              background-color: #{$button-color-active};
             }
           }
         }
       }
       .box3 {
         margin-top: 30px;
-
         .wrap_title {
           h3 {
             color: #000;
             font-size: 18px;
           }
         }
-
         .buttons {
           display: flex;
           justify-content: space-between;
           margin-top: 10px;
-
           button {
             flex: 1;
             height : 70px;
-            margin-right: 30px;
+            margin-right: 10px;
             font-family: "Pretendard";
             font-weight: bold;
             font-size: 15px;
             color: #000;
-            background: #FFDEA0;
+            background: #{$button-color-default};
             border: none;
             outline: none;
             border-radius: 10px;
             cursor: pointer;
             transition: background-color 0.3s ease;
-
             &:last-child {
               margin-right: 0;
             }
             &:hover {
-              outline: 2px solid #FFC24F;
+              background-color: #{$button-color-active};
             }
-            &:focus{
-              background-color: #FFC24F;
+            &.active {
+              background-color: #{$button-color-active};
             }
           }
         }
       }
-
       .sum {
         position: relative;
-        margin-top: 35px;
-
+        margin-top: 50px;
         .sum_button {
-          background: #FFDEA0;
+          background: #{$button-color-default};
           width: 100%;
           height: 60px;
           margin-top: 10px;
@@ -170,28 +160,23 @@ body {
           border-radius: 10px;
           transition: background-color 0.3s ease;
           cursor: pointer;
-          
           &:hover {
-            background-color: #FFC24F;
+            background-color: #{$button-color-active};
           }
-
-          &:focus{
-            background-color: #FFC24F;
+          &.active {
+            background-color: #{$button-color-active};
           }
         }
       }
     }
   }
 }
-
 .slide-up {
   opacity: 1;
   transform: translateY(0);
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
-
 .slide-up-hidden {
   opacity: 0;
-  transform: translateY(-20px);
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transform: translateY(20px);
 }
